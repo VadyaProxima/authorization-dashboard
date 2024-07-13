@@ -1,6 +1,6 @@
 const API_URL = 'https://api.vertical.chulakov.dev';
 
-export async function login(email, password) {
+export async function login(email: string, password: string) {
   const response = await fetch(`${API_URL}/api/auth/signin/email`, {
     method: 'POST',
     headers: {
