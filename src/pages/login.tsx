@@ -1,4 +1,5 @@
 'use client'
+import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { login } from '../utils/api'
@@ -8,6 +9,7 @@ const Login = () => {
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
 	const router = useRouter()
+	const [visible, setVisible] = useState(true)
 
 	const handleLogin = async (e: React.FormEvent) => {
 		e.preventDefault()
@@ -18,7 +20,7 @@ const Login = () => {
 			localStorage.setItem('token', response.token)
 			router.push('/dashboard')
 		} catch (err) {
-			setError((err as Error).message || 'Ошибка авторизации')
+			setError((err as Error).message)
 		}
 	}
 
@@ -33,14 +35,23 @@ const Login = () => {
 					required
 					className={styles.block__input}
 					type="text"
-				/> 	
-				<input
+					placeholder="mail"
+				/>
+				<div className={styles.block__password}>
+					<input
+					placeholder="password"
 					value={password}
 					onChange={e => setPassword(e.target.value)}
 					required
 					className={styles.block__input}
-					type="password"
+					type={visible ? 'text' : 'password'}
+					
 				/>
+				<div className={styles.visible_btn} onClick={()=> setVisible(!visible)}>
+					{visible ? <EyeOutlined/>: <EyeInvisibleOutlined/>}
+				</div>
+				</div>
+				
 				<div className={styles.block__RemmeberForgot}>
 					<label htmlFor="">
 						<input type="checkbox" />

@@ -34,7 +34,31 @@
 		background: transparent;
 		font-size: clamp(0.875rem, 0.804rem + 0.36vw, 1.125rem);
 		border: 2px solid #ffffff;
+		color: #ffffff;
+		.block__input::placeholder{
+			color: #ffffff;
+
+
+		}
+	
 	}
+	.block__password{
+		display: flex;
+		width: 100%;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	.visible_btn{
+		position: absolute;
+		scale: 120%;
+		padding: 20px;
+	}
+	.block__input::placeholder{
+			color: #c4c4c4;
+
+
+		}
+
 
 	.block__RemmeberForgot {
 		width: 100%;
