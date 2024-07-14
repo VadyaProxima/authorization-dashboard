@@ -338,7 +338,7 @@ export default function Home () {
                   </span>
                   {/* checkbox */}
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo1" id="todoCheck1" />
+                    <input type="checkbox" name="todo1" id="todoCheck1" />
                     <label htmlFor="todoCheck1" />
                   </div>
                   {/* todo text */}
@@ -357,7 +357,7 @@ export default function Home () {
                     <i className="fas fa-ellipsis-v" />
                   </span>
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo2" id="todoCheck2" defaultChecked />
+                    <input type="checkbox"name="todo2" id="todoCheck2" defaultChecked />
                     <label htmlFor="todoCheck2" />
                   </div>
                   <span className="text">Make the theme responsive</span>
@@ -373,7 +373,7 @@ export default function Home () {
                     <i className="fas fa-ellipsis-v" />
                   </span>
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo3" id="todoCheck3" />
+                    <input type="checkbox"name="todo3" id="todoCheck3" />
                     <label htmlFor="todoCheck3" />
                   </div>
                   <span className="text">Let theme shine like a star</span>
@@ -389,7 +389,7 @@ export default function Home () {
                     <i className="fas fa-ellipsis-v" />
                   </span>
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo4" id="todoCheck4" />
+                    <input type="checkbox"name="todo4" id="todoCheck4" />
                     <label htmlFor="todoCheck4" />
                   </div>
                   <span className="text">Let theme shine like a star</span>
@@ -405,7 +405,7 @@ export default function Home () {
                     <i className="fas fa-ellipsis-v" />
                   </span>
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo5" id="todoCheck5" />
+                    <input type="checkbox"name="todo5" id="todoCheck5" />
                     <label htmlFor="todoCheck5" />
                   </div>
                   <span className="text">Check your messages and notifications</span>
@@ -421,7 +421,7 @@ export default function Home () {
                     <i className="fas fa-ellipsis-v" />
                   </span>
                   <div className="icheck-primary d-inline ml-2">
-                    <input type="checkbox" defaultValue name="todo6" id="todoCheck6" />
+                    <input type="checkbox"name="todo6" id="todoCheck6" />
                     <label htmlFor="todoCheck6" />
                   </div>
                   <span className="text">Let theme shine like a star</span>

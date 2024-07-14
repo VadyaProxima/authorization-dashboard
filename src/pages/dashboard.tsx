@@ -9,7 +9,7 @@ import '../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.c
 import '../plugins/icheck-bootstrap/icheck-bootstrap.min.css';
 import '../plugins/jqvmap/jqvmap.min.css';
 import '../dist/css/adminlte.min.css';
-import '../plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
+// import '../plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
 import '../plugins/daterangepicker/daterangepicker.css';
 import '../plugins/summernote/summernote-bs4.min.css';
 
