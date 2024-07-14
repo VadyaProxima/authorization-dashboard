@@ -33,7 +33,7 @@ const Login = () => {
 					required
 					className={styles.block__input}
 					type="text"
-				/>
+				/> 	
 				<input
 					value={password}
 					onChange={e => setPassword(e.target.value)}
