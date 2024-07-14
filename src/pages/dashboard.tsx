@@ -28,9 +28,9 @@ export default function DashboardPage() {
       await import('../plugins/jquery/jquery.min');
       await import('moment');
       await import('daterangepicker');
-      await import('overlayScrollbars');
+      // await import('overlayScrollbars');
       await import('../dist/js/adminlte');
-      await import('../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') 
+      // await import('../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') 
     };
 
     loadScripts();
