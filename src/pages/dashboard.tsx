@@ -12,14 +12,15 @@ import '../dist/css/adminlte.min.css';
 // import '../plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
 import '../plugins/daterangepicker/daterangepicker.css';
 import '../plugins/summernote/summernote-bs4.min.css';
+import withAuth from '../utils/withAuth';
 
-export default function DashboardPage() {
+const DashboardPage = () => {
   const router = useRouter();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
-      router.push('/login');
+      router.push('/');
     }
   }, [router]);
 
@@ -48,3 +49,5 @@ export default function DashboardPage() {
 
   );
 }
+
+export default withAuth(DashboardPage);
