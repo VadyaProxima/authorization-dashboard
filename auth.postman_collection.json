@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "9432f80b-1f8e-4a79-bc6c-500f4158ce23",
+		"name": "Парктика",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28088296"
+	},
+	"item": [
+		{
+			"name": "Авторизация оптового пользователя",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test001@gmail.com\",\n    \"password\": \"rm4zCkfkfBQK8y9G\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/auth/signin/email",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin",
+						"email"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200: успешный запрос",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"director@mail.tst\",\n    \"password\": \"secretPassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signin/email",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin",
+								"email"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:04:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15768000"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjA2ODk2NDUsImV4cCI6MTcyMDY5MDU0NSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImhhc1Bhc3N3b3JkIjp0cnVlLCJoYXNFbWFpbCI6dHJ1ZSwiaGFzUGhvbmUiOmZhbHNlLCJpY29uRnVsbE5hbWUiOiLQn9CSIiwiZnVsbE5hbWUiOiLQn9C10YLRgCDQki4iLCJmaXJzdE5hbWUiOiLQn9C10YLRgCIsIm1pZGRsZU5hbWUiOiLQktC70LDQtNC40LzQuNGA0L7QstC40YciLCJsYXN0TmFtZSI6ItCY0LLQsNC90L7QsiIsInVzZXJUeXBlIjpbIndob2xlc2FsZSJdLCJjb25maXJtZWRGaWVsZHMiOnsicGFzc3dvcmQiOnRydWUsImVtYWlsIjp0cnVlLCJwaG9uZSI6ZmFsc2V9LCJ1c2VyTmFtZSI6eyJmaXJzdE5hbWUiOiLQn9C10YLRgCIsIm1pZGRsZU5hbWUiOiLQktC70LDQtNC40LzQuNGA0L7QstC40YciLCJsYXN0TmFtZSI6ItCY0LLQsNC90L7QsiJ9LCJpZCI6IjllNTdjMzIzLWNlMDktNGJjYi04N2VhLTkzZGVjMTE1NmY5OSJ9.XwOBqDoiQJwrwmeh9qDkm9E8qPVwrJoZCYher4j4sk6y1IjlCheKv1kdxwI3JBRytZ84fGcs6LGZMlzWFu7mhm39s0o9zXk6grBboNVWiBO5g0PGPyoIC0jnVkh8XX2Lplh5FmPLQpK5zZpQhEO9pfje24lzj-iyLgE_dXqqBVKLXV_W05_8Q9OBYTTxRh_F_DSHdR6gyxwJLPFH2MWk2ZSRhcXmQAhQviitAlEp6saYNnUdEb1iNM_X_N2djXRo0zRoT-eo8ItU1C0Nl3ZqgD-AEf4WbgfTM8i6j4K2oIEF6T64hAjJUHmCw5RkM04c5tLKPs3acraitgMi_CeUyA\"\n}"
+				},
+				{
+					"name": "400: некорректный пароль/логин",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dir@mail.tst\",\n    \"password\": \"secPassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signin/email",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:21:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Пожалуйста, введите правильный пароль или логин.\",\n    \"errors\": []\n}"
+				},
+				{
+					"name": "400: ошибка валидации",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"director@mail.tst\",\n    \"password\": \"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signin/email",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:26:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Извините, данные формы не валидны.\",\n    \"errors\": {\n        \"password\": [\n            \"Значение слишком короткое. Должно быть равно 6 символам или больше.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Перевыпуск токена пользователя",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/auth/refresh",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200: успешный запрос",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/refresh",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:34:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15768000"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjA2ODk2NzQsImV4cCI6MTcyMDY5MDU3NCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImhhc1Bhc3N3b3JkIjp0cnVlLCJoYXNFbWFpbCI6dHJ1ZSwiaGFzUGhvbmUiOmZhbHNlLCJpY29uRnVsbE5hbWUiOiLQn9CSIiwiZnVsbE5hbWUiOiLQn9C10YLRgCDQki4iLCJmaXJzdE5hbWUiOiLQn9C10YLRgCIsIm1pZGRsZU5hbWUiOiLQktC70LDQtNC40LzQuNGA0L7QstC40YciLCJsYXN0TmFtZSI6ItCY0LLQsNC90L7QsiIsInVzZXJUeXBlIjpbIndob2xlc2FsZSJdLCJjb25maXJtZWRGaWVsZHMiOnsicGFzc3dvcmQiOnRydWUsImVtYWlsIjp0cnVlLCJwaG9uZSI6ZmFsc2V9LCJ1c2VyTmFtZSI6eyJmaXJzdE5hbWUiOiLQn9C10YLRgCIsIm1pZGRsZU5hbWUiOiLQktC70LDQtNC40LzQuNGA0L7QstC40YciLCJsYXN0TmFtZSI6ItCY0LLQsNC90L7QsiJ9LCJpZCI6IjllNTdjMzIzLWNlMDktNGJjYi04N2VhLTkzZGVjMTE1NmY5OSJ9.LozJ_6afMW8XdYCt7cR7MEejmlvZFlxY5FIsA_YWhvscgrJ-o3OtwneyIH7Er2-0wLpCwtUeYvlovajqmcgAFsJtBTVtstiH6d6o-w8PY58IMmvcinf3808moFQe90oSvz51vCDtk2JA0YpSn9lOw-sO_T0Q6Kf7kpmuRBn8Ba6hWtKQfPTHP4uwxgRGxoGdVUEPESvAiJ3q8ZOGxD8KwH4ixAI6bsYH7F7RKlLdiIxNcSVbrEI2ZmXT7mNeMus959OM3s10Uwat6RUxXyvTTZcauDUC-m0lqeln7mwW9sV6_uaoDWvA7S7iUC5ohwPFJTR8SSqi3H-qMIkSE9OAig\"\n}"
+				},
+				{
+					"name": "400: истекший RT",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/refresh",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:37:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Извините, действие данного токен перевыпуска истекло.\",\n    \"errors\": []\n}"
+				},
+				{
+					"name": "400: любая другая ошибка",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/refresh",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.21.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Jul 2022 16:38:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Извините, не удалось получить токен перевыпуска.\",\n    \"errors\": []\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://api.vertical.chulakov.dev",
+			"type": "string"
+		}
+	]
+}
