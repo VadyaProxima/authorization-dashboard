@@ -1,5 +1,7 @@
 
-В auth.postman_collection.json лежат инструкции к api|
+В auth.postman_collection.json лежат инструкции к api
+
+данные для авторизации: login:test001@gmail.com   pass:rm4zCkfkfBQK8y9G
 
 
 
